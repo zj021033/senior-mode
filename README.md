@@ -14,7 +14,7 @@ Your coding agent says **"You're absolutely right!"** — and then ships the bug
 
 It hasn't even figured out where the problem is, and it's already patching like crazy. It doesn't reason its way to the bug, doesn't ask you a single question — it just says *"you're right,"* copies your own idea back to you, and re-words it in AI-speak.
 
-`senior-mode` is an ~80-line skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (and any agent that reads the [Agent Skills](https://agentskills.io/) standard) that fixes the five things juniors do:
+`senior-mode` is a ~120-line skill for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) (and any agent that reads the [Agent Skills](https://agentskills.io/) standard) that fixes the five things juniors do:
 
 | Discipline | Junior default | senior-mode |
 |---|---|---|
@@ -23,6 +23,8 @@ It hasn't even figured out where the problem is, and it's already patching like 
 | **Goal before work** | starts coding before the goal is clear | breaks the goal into tasks, confirms with you, then executes |
 | **Root cause** | sees a symptom and starts patching | finds the real cause and fixes that |
 | **Cut the slop** | pads with preamble, over-produces | says only what changes the decision, sizes effort to the task |
+
+And the discipline juniors *also* miss — knowing when **not** to push. senior-mode won't manufacture disagreement, interrogate you over a one-line change, or stamp a warning on a plan that's actually fine. A catch fires only when something is genuinely off; a clean answer stays clean.
 
 ### It's not an isolated problem
 
@@ -50,7 +52,7 @@ On by default. Too noisy? Say *"senior-mode quiet"* — it keeps every behavior,
 
 ### Why this one, not the other "be honest" prompts
 
-Most anti-sycophancy prompts are generic *thinking-partner* tools for decisions and leadership. `senior-mode` is an **engineering discipline for people who ship code**: root-cause debugging, pushing back on bad *technical* plans, refusing band-aid fixes, calibrating effort to the task. It's aimed at the terminal, not the boardroom — the ruleset I actually run my own agents on, distilled to ~80 lines.
+Most anti-sycophancy prompts are generic *thinking-partner* tools for decisions and leadership. `senior-mode` is an **engineering discipline for people who ship code**: root-cause debugging, pushing back on bad *technical* plans, refusing band-aid fixes, calibrating effort to the task. It's aimed at the terminal, not the boardroom — the ruleset I actually run my own agents on, distilled to ~120 lines.
 
 ### Install
 
@@ -79,7 +81,7 @@ MIT. Take it, fork it, make your agent less of a junior.
 
 它根本没搞清楚问题出在哪,就开始疯狂打补丁。它不靠逻辑和推理去找问题,也不问你一句,只会"你说得对",然后把你的想法复制一遍、换一句 AI 味的话还给你。
 
-`senior-mode` 是一个约 80 行的 skill,适用于 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 及任何支持 [Agent Skills](https://agentskills.io/) 标准的 agent,专治"junior"才会犯的五件事:
+`senior-mode` 是一个约 120 行的 skill,适用于 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 及任何支持 [Agent Skills](https://agentskills.io/) 标准的 agent,专治"junior"才会犯的五件事:
 
 | 纪律 | junior 默认 | senior-mode |
 |---|---|---|
@@ -88,6 +90,8 @@ MIT. Take it, fork it, make your agent less of a junior.
 | **先定目标再动手** | 目标没定就开干 | 按目标和预期拆任务,跟你确认后再执行 |
 | **追根因** | 没找根因,看到表象就处理 | 找到根因,针对根因下手 |
 | **砍 slop** | 一堆铺垫废话,把小事搞复杂 | 只说改变决策的话,投入和任务大小匹配 |
+
+还有 junior 同样缺的那条——知道**什么时候别硬刚**:senior-mode 不会无中生有地反对、不会为一行小改盘问你、不会给本来没问题的方案乱扣警告。只有真有问题时才触发,没问题的回答保持干净。
 
 ### 这不是个例
 
